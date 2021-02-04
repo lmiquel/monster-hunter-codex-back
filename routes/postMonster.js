@@ -6,8 +6,6 @@ router.post("/new-monster", async (req, res) => {
 
     try{
 
-    const { newMonster } = req.body;
-
     const monsterQuery = `INSERT INTO 
     monster (
         name,
@@ -15,9 +13,9 @@ router.post("/new-monster", async (req, res) => {
         severable_tail
     ) VALUES (?, ?, ?);`;
     const monsterValues = [
-        newMonster.name,
-        newMonster.picture,
-        newMonster.severable_tail
+        req.body.name,
+        req.body.picture,
+        req.body.severable_tail
     ];
     const {insertId: monster_id} = await connection.query(monsterQuery, monsterValues);
 
@@ -31,11 +29,11 @@ router.post("/new-monster", async (req, res) => {
         monster_id
     ) VALUES (?, ?, ?, ?, ?, ?);`;
     const elementsValues = [
-        newMonster.fire,
-        newMonster.water,
-        newMonster.thunder,
-        newMonster.ice,
-        newMonster.dragon,
+        req.body.fire,
+        req.body.water,
+        req.body.thunder,
+        req.body.ice,
+        req.body.dragon,
         monster_id
     ];
 
@@ -51,11 +49,11 @@ router.post("/new-monster", async (req, res) => {
         monster_id
     ) VALUES (?, ?, ?, ?, ?, ?);`;
     const ailmentsValues = [
-        newMonster.poison,
-        newMonster.sleep,
-        newMonster.paralysis,
-        newMonster.blast,
-        newMonster.stun,
+        req.body.poison,
+        req.body.sleep,
+        req.body.paralysis,
+        req.body.blast,
+        req.body.stun,
         monster_id
     ];
 
