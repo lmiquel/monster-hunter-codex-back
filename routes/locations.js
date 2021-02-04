@@ -19,4 +19,19 @@ router.get("/locations/:monsterId", async (req, res) => {
   }
 });
 
+router.get("/location/:locationid", async (req, res) => {
+  const { locationid } = req.params;
+
+  try {
+    const location = await connection.query(
+      `SELECT * FROM locations WHERE id = ?`,
+      [locationid]
+    );
+    res.status(200).json(location);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+});
+
 module.exports = router;
