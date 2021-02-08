@@ -64,6 +64,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `locations` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(75) NOT NULL,
+  `picture` VARCHAR(1000) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

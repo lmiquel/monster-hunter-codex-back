@@ -1,10 +1,10 @@
-INSERT INTO locations (name) VALUES 
-('Forêt ancienne'),
-('Désert des Termites'),
-('Plateau de Corail'),
-('Val Putride'),
-('Terres des Anciens'),
-('Givre éternel');
+INSERT INTO locations (name, picture) VALUES 
+('Forêt ancienne', 'https://www.gamesidestory.com/wp-content/uploads/2018/03/Monster-Hunter_-World_20180131004520.jpg'),
+('Désert des Termites', 'http://oyster.ignimgs.com/mediawiki/apis.ign.com/monster-hunter-world/9/9c/MHW-Wildspire_Waste_Screenshot_007.jpg'),
+('Plateau de Corail', 'https://assets.primagames.com/media/images/news/Monster_Hunter_World_Iceborne_Bathycite_Ore_Guide.jpg/PRIMA/resize/1200x/format/jpg'),
+('Val Putride', 'https://i.ytimg.com/vi/WqweP1Oq79o/maxresdefault.jpg'),
+('Terres des Anciens', 'https://image.jeuxvideo.com/medias-md/151874/1518742038-926-card.jpg'),
+('Givre éternel', 'https://static1-fr.millenium.gg/articles/9/34/39/89/@/1135092-zone-secrete-article_m-1.jpg');
 
 INSERT INTO monster (name, picture, severable_tail) VALUES
 ('Odogaron', 'https://www.eclypsia.com/content/MonsterHunter/World/Monstres/14.png', 1),
