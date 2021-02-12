@@ -27,7 +27,6 @@ router.get("/locations", async (req, res) => {
       `SELECT * FROM locations`,
       [locationid]
     );
-    console.log(location)
     res.status(200).json(location);
   } catch (err) {
     console.log(err);

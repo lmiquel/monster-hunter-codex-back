@@ -18,7 +18,6 @@ router.get("/monster/:monsterId", async (req, res) => {
 
     try {
       const monster = await connection.query(`SELECT * FROM monster WHERE id = ?`, [monsterId]);
-      console.log(monster);
       res.status(200).json(monster);
     } catch (err) {
       console.log(err);
